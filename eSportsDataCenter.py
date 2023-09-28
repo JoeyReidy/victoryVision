@@ -1,4 +1,9 @@
 import csv
+TOTAL_HP_GAMES = 0
+TOTAL_HP_KILLS = 0.00
+TOTAL_HP_DEATHS = 0.00
+TOTAL_HP_DAMAGE = 0
+TOTAL_HILLTIME = 0
 
 class RawPlayerStat:
     __slots__ = ["__MATCH_NAME", "__MATCH_ID", "__GAMEMODE", "__HP_MAP", "__HP_KILLS", "__HP_DEATHS", "__HP_DAMAGE", "__HILLTIME",
@@ -14,21 +19,21 @@ class RawPlayerStat:
       self.__GAMEMODE = ""
 
       self.__HP_MAP = ""
-      self.__HP_KILLS = 0
-      self.__HP_DEATHS = 0
+      self.__HP_KILLS = 0.00
+      self.__HP_DEATHS = 0.00
       self.__HP_DAMAGE = 0
       self.__HILLTIME = 0
 
       self.__SND_MAP = ""
-      self.__SND_KILLS = 0
-      self.__SND_DEATHS = 0
+      self.__SND_KILLS = 0.00
+      self.__SND_DEATHS = 0.00
       self.__SND_DAMAGE = 0
       self.__SND_PLANTS = 0
       self.__SND_FIRSTBLOODS = 0
 
       self.__CTRL_MAP = ""
-      self.__CTRL_KILLS = 0
-      self.__CTRL_DEATHS = 0
+      self.__CTRL_KILLS = 0.00
+      self.__CTRL_DEATHS = 0.00
       self.__CTRL_DAMAGE = 0
 
     def openfile(self, filename):
@@ -61,10 +66,11 @@ class RawPlayerStat:
                 self.__CTRL_DAMAGE = i[17]
                 break
 
+    def 
     def MatchHeader(self):
        return "Match Name:" + self.__MATCH_NAME + "\nMatch ID:" + self.__MATCH_ID + "\nGamemode:" + self.__GAMEMODE
     def HardpointHeader(self):
-       return "HP Map:" + self.__HP_MAP 
+       return "HP Map:" + self.__HP_MAP + "\nKills:" + self.__HP_KILLS + "\nDeaths"
 
 
 
