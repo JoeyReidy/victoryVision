@@ -40,7 +40,7 @@ class RawPlayerStat:
 
 
 
-def openfile(filename, RawPlayerStat, player):
+def openfile(filename, player: RawPlayerStat):
   with open(filename, "r") as csv_file:
     reader = csv.reader(csv_file)
     with open(filename) as file:
